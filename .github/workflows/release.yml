@@ -36,7 +36,7 @@ jobs:
       - name: Update Umbraco package version
         shell: pwsh
         run: |
-          $packageJsonPath = 'src/uMux/Client/public/umbraco-package.json'
+          $packageJsonPath = 'src/uGum/Client/public/umbraco-package.json'
           $packageJson = Get-Content -Raw $packageJsonPath | ConvertFrom-Json
           $packageJson.version = $env:RELEASE_VERSION
 
@@ -57,14 +57,14 @@ jobs:
 
       - name: Install npm dependencies
         run: npm ci
-        working-directory: src/uMux/Client
+        working-directory: src/uGum/Client
 
       - name: Build npm package
         run: npm run build
-        working-directory: src/uMux/Client
+        working-directory: src/uGum/Client
 
       - name: Build and pack NuGet package
-        run: dotnet pack src/uMux/uMux.csproj --configuration Release --output artifacts /p:PackageVersion=$env:RELEASE_VERSION
+        run: dotnet pack src/uGum/uGum.csproj --configuration Release --output artifacts /p:PackageVersion=$env:RELEASE_VERSION
 
       - name: NuGet login (OIDC)
         id: nuget-login
@@ -82,7 +82,7 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          name: uMux ${{ github.ref_name }}
+          name: uGum ${{ github.ref_name }}
           generate_release_notes: true
           prerelease: ${{ contains(github.ref_name, '-') }}
           files: artifacts/*.nupkg
