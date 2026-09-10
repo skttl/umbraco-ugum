@@ -1,0 +1,14 @@
+{
+  "id": "uGum",
+  "name": "uGum",
+  "version": "0.0.0",
+  "allowPackageTelemetry": true,
+  "extensions": [
+    {
+      "name": "uGum Bundle",
+      "alias": "uGum.Bundle",
+      "type": "bundle",
+      "js": "/App_Plugins/uGum/u-gum.js"
+    }
+  ]
+}
