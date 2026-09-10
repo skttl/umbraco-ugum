@@ -4,7 +4,7 @@ uGum synchronizes video files uploaded to Umbraco with Gumlet. When an Umbraco i
 
 ## Requirements
 
-- Umbraco CMS 17 or newer
+- Umbraco CMS 18 or newer
 - A Gumlet Video workspace
 - A Gumlet API key with permission to create, read, and delete video assets
 - The Gumlet video source ID used for ingestion
