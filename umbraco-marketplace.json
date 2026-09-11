@@ -13,5 +13,16 @@
   "IssueTrackerUrl": "https://github.com/skttl/umbraco-ugum/issues",
   "PackageType": "Integration",
   "Tags": [],
+  "Screenshots": [
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/skttl/umbraco-ugum/main/docs/umbraco_data_type.png",
+      "Caption": "Configure the Gumlet Sync property editor on an Umbraco type"
+    },
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/skttl/umbraco-ugum/main/docs/umbraco_media.png",
+      "Caption": "View the synchronized Gumlet asset on an Umbraco media item"
+    }
+  ],
+  "Tags": ["Gumlet", "Video", "Media"],
   "Title": "uGum"
 }
